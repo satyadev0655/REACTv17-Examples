@@ -4,18 +4,17 @@ import './App.css';
  
 function App() {
 
-  const [task, setTask] = useState();
   const [taskItems, setTaskItems] = useState(['hello']);
 
     const [name , setName] = useState('');
     
     const handleChange =(e)=>{
-      setTask(e.target.value);
+      setName(e.target.value);
     }
     
     const handleSubmit=(e)=>{
-      setTaskItems([...taskItems, task])
-      setTask(null);
+      setTaskItems([...taskItems, name])
+      setName("");
         //alert('A form was submitted with Name :"' + name);
       e.preventDefault();
  
